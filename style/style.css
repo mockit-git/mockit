@@ -408,56 +408,95 @@ body .pricing .content p {
   font-size: 16px;
   color: #666;
 }
-body .pricing .pricing-card {
+body .pricing .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+body .pricing .cards .pricing-card {
   background: white;
   max-width: 350px;
-  margin: 0 auto;
   padding: 30px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  width: 320px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
 }
-body .pricing .pricing-card h3 {
+body .pricing .cards .pricing-card h3 {
   font-size: 22px;
   color: #222;
   margin-bottom: 10px;
 }
-body .pricing .pricing-card .price {
+body .pricing .cards .pricing-card .next-price {
+  font-size: 14px;
+}
+body .pricing .cards .pricing-card .trial-info {
+  font-size: 14px;
+}
+body .pricing .cards .pricing-card p {
+  margin: 10px 0;
+}
+body .pricing .cards .pricing-card .recommended {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #bad9ff;
+  color: #111827;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+body .pricing .cards .pricing-card .price {
   font-size: 26px;
   color: #2A7DE1;
   font-weight: bold;
 }
-body .pricing .pricing-card .price span {
+body .pricing .cards .pricing-card .price span {
   font-size: 32px;
   color: #2A7DE1;
 }
-body .pricing .pricing-card .next-price {
+body .pricing .cards .pricing-card .next-price {
   font-size: 16px;
   color: grey;
   margin-bottom: 15px;
 }
-body .pricing .pricing-card ul {
+body .pricing .cards .pricing-card ul {
   list-style: none;
   padding: 0;
   text-align: start;
+  flex-grow: 1;
+  margin-bottom: 20px;
 }
-body .pricing .pricing-card ul li {
+body .pricing .cards .pricing-card ul li {
   font-size: 14px;
   padding: 5px 0;
   color: #444;
 }
-body .pricing .pricing-card a {
+body .pricing .cards .pricing-card a {
   text-decoration: none;
   background: #2A7DE1;
   color: white;
   font-size: 16px;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: auto;
+  width: 100%;
+  max-width: 250px;
   transition: 0.3s;
 }
-body .pricing .pricing-card a:hover {
+body .pricing .cards .pricing-card a:hover {
   background: #0056b3;
 }
 body .get-started {
@@ -782,6 +821,9 @@ body .about-body-section .hero-section {
   .features-section .interview-type .card-container .cards .card img {
     width: 100% !important;
   }
+  .pricing .cards {
+    flex-direction: column !important;
+  }
   .footer {
     gap: 15px;
     padding: 15px;
@@ -824,6 +866,16 @@ body .about-body-section .hero-section {
   }
   .hero-section .hero .hero-image {
     width: 100%;
+  }
+  .pricing .cards {
+    flex-direction: column !important;
+  }
+  .pricing .cards .pricing-card {
+    width: 250px !important;
+  }
+  .pricing .cards .pricing-card a {
+    font-size: 14px !important;
+    width: 100px !important;
   }
   .features-section .features .card-container .cards {
     flex-direction: column;
