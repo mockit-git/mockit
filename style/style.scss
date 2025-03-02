@@ -280,7 +280,10 @@ body {
             }
         }
     }
-
+.divider {
+    height: 50px;
+    width: 100%;
+}
     .features-section {
         padding: 20px 30px;
         width: calc(100% - 60px);
@@ -358,6 +361,11 @@ body {
                     }
                 }
             }
+        }
+
+        .divider {
+            height: 50px;
+            width: 100%;
         }
 
         .interview-type {
@@ -480,130 +488,131 @@ body {
         }
     }
 
-        .pricing {
-            text-align: center;
-            padding: 50px;
-            background: $primary-color;
-    
-            .content {
-                margin-bottom: 30px;
-    
-                span {
-                    font-size: 24px;
-                    font-weight: bold;
-                    color: #333;
-                }
-    
-                p {
-                    font-size: 16px;
-                    color: #666;
-                }
+    .pricing {
+        text-align: center;
+        padding: 50px;
+        background: $primary-color;
+
+        .content {
+            margin-bottom: 30px;
+
+            span {
+                font-size: 24px;
+                font-weight: bold;
+                color: #333;
             }
-    
-            .cards {
+
+            p {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; // Increased gap for better spacing
+            max-width: 1200px;
+            margin: auto;
+
+            .pricing-card {
+                background: white;
+                max-width: 350px;
+                padding: 30px;
+                box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                width: 320px;
+                height: 550px; // Ensures all cards have the same height
                 display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
+                justify-content: space-between; // Keeps button at bottom
                 align-items: center;
-                gap: 20px; // Increased gap for better spacing
-                max-width: 1200px;
-                margin: auto;
-    
-                .pricing-card {
-                    background: white;
-                    max-width: 350px;
-                    padding: 30px;
-                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-                    border-radius: 10px;
-                    width: 320px;
-                    height: 550px; // Ensures all cards have the same height
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between; // Keeps button at bottom
-                    align-items: center;
-                    text-align: center;
-                    position: relative;
-    
-                    h3 {
-                        font-size: 22px;
-                        color: #222;
-                        margin-bottom: 10px;
-                    }
+                text-align: center;
+                position: relative;
 
-                    .next-price{
-                        font-size: 14px;
-                    }
-                    .trial-info{
-                        font-size: 14px;
-                    }
-    
-                    p{
-                        margin: 10px 0;
-                    }
+                h3 {
+                    font-size: 22px;
+                    color: #222;
+                    margin-bottom: 10px;
+                }
 
-                    .recommended {
-                        position: absolute;
-                        top: 20px;
-                        right: 20px;
-                        background: $tirtiary-color-light;
-                        color: $secondary-color;
-                        font-size: 12px;
-                        padding: 5px 10px;
-                        border-radius: 25px;
-                    }
+                .next-price {
+                    font-size: 14px;
+                }
 
-                    .price {
-                        font-size: 26px;
+                .trial-info {
+                    font-size: 14px;
+                }
+
+                p {
+                    margin: 10px 0;
+                }
+
+                .recommended {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    background: $tirtiary-color-light;
+                    color: $secondary-color;
+                    font-size: 12px;
+                    padding: 5px 10px;
+                    border-radius: 25px;
+                }
+
+                .price {
+                    font-size: 26px;
+                    color: $tirtiary-color;
+                    font-weight: bold;
+
+                    span {
+                        font-size: 32px;
                         color: $tirtiary-color;
-                        font-weight: bold;
-    
-                        span {
-                            font-size: 32px;
-                            color: $tirtiary-color;
-                        }
                     }
-    
-                    .next-price {
-                        font-size: 16px;
-                        color: $description-color;
-                        margin-bottom: 15px;
+                }
+
+                .next-price {
+                    font-size: 16px;
+                    color: $description-color;
+                    margin-bottom: 15px;
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: start;
+                    flex-grow: 1; // Allows the list to expand while keeping the button at bottom
+                    margin-bottom: 20px;
+
+                    li {
+                        font-size: 14px;
+                        padding: 5px 0;
+                        color: #444;
                     }
-    
-                    ul {
-                        list-style: none;
-                        padding: 0;
-                        text-align: start;
-                        flex-grow: 1; // Allows the list to expand while keeping the button at bottom
-                        margin-bottom: 20px;
-    
-                        li {
-                            font-size: 14px;
-                            padding: 5px 0;
-                            color: #444;
-                        }
-                    }
-    
-                    a {
-                        text-decoration: none;
-                        background: $tirtiary-color;
-                        color: white;
-                        font-size: 16px;
-                        padding: 12px 20px;
-                        border: none;
-                        border-radius: 5px;
-                        cursor: pointer;
-                        margin-top: auto; // Ensures button stays at bottom
-                        width: 100%; // Makes button full width for better UI
-                        max-width: 250px;
-                        transition: 0.3s;
-    
-                        &:hover {
-                            background: $hover-color;
-                        }
+                }
+
+                a {
+                    text-decoration: none;
+                    background: $tirtiary-color;
+                    color: white;
+                    font-size: 16px;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-top: auto; // Ensures button stays at bottom
+                    width: 100%; // Makes button full width for better UI
+                    max-width: 250px;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background: $hover-color;
                     }
                 }
             }
         }
+    }
 
 
     .get-started {
@@ -651,6 +660,43 @@ body {
             }
         }
     }
+
+
+
+    //about page
+
+    .about-body-section {
+
+        padding: 0 30px;
+        width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
+
+        .hero-section {
+            margin-top: 3rem !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 30px;
+            width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
+            height: 100dvh;
+        }
+    }
+
+
+    //privacy page
+
+    .privacy-policy-section {
+        padding: 0 30px;
+        width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 100px 30px;
+            width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
+        }
+    }
+
+
 
     .footer-section {
         padding: 40px 30px;
@@ -779,32 +825,6 @@ body {
 
 
 
-    //about page
-
-    .about-body-section {
-
-        padding: 0 30px;
-        width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
-
-        .hero-section {
-            margin-top: 3rem !important;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0 30px;
-            width: calc(100% - 60px); // 100% width minus left & right padding (30px each)
-            height: 100dvh;
-        }
-    }
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -888,9 +908,13 @@ body {
 
         .close-btn {
             display: flex;
-            justify-content: flex-end;
+            justify-content: end;
             align-items: center;
             margin-bottom: 20px;
+            width: 35px;
+            height: 35px;
+            right: 0;
+            margin-left: calc(250px - 35px);
 
             img {
                 width: 20px;
@@ -1131,7 +1155,7 @@ body {
             .pricing-card {
                 width: 250px !important;
 
-                a{
+                a {
                     font-size: 14px !important;
                     width: 100px !important;
                 }

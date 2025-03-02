@@ -1,6 +1,6 @@
 
 const APP_CONFIG = {
-    version: "v1.0.1"
+    version: "v1.1.0"
 };
 const currentYear = new Date().getFullYear(); // Get the current year dynamically
 var logo = document.getElementById("logo");
