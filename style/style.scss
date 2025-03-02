@@ -1127,6 +1127,14 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+
+    body{
+        .divider {
+                height: 35px;
+                width: 100%;
+            }
+    }
+
     .hero-section {
         .hero {
             // margin-bottom: 50px !important;

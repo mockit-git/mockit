@@ -879,6 +879,10 @@ body .footer-section p {
   }
 }
 @media screen and (max-width: 550px) {
+  body .divider {
+    height: 35px;
+    width: 100%;
+  }
   .hero-section .hero .hero-content span {
     font-size: 32px !important;
     line-height: 1.4 !important;
